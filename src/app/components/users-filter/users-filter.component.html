@@ -1,0 +1,31 @@
+<form [formGroup]="filterForm">
+  <div class="form-container">
+    <mat-form-field>
+      <input matInput placeholder="First name" formControlName="firstName">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Phone" formControlName="phone" type="number">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="City" formControlName="city">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput [matDatepicker]="dateFrom" placeholder="Date of birth from" formControlName="dateFrom">
+      <mat-datepicker-toggle matSuffix [for]="dateFrom"></mat-datepicker-toggle>
+      <mat-datepicker #dateFrom></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput [matDatepicker]="dateTo" placeholder="Date of birth to" formControlName="dateTo">
+      <mat-datepicker-toggle matSuffix [for]="dateTo"></mat-datepicker-toggle>
+      <mat-datepicker #dateTo></mat-datepicker>
+    </mat-form-field>
+
+    <button type="button" mat-icon-button (click)="onReset()">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+</form>

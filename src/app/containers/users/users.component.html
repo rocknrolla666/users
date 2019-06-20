@@ -1,0 +1,4 @@
+<div class="users-page">
+  <app-users-filter (filterChanges)="filter = $event" class="users-filter"></app-users-filter>
+  <app-users-table [users]="users" [filter]="filter" class="users-table"></app-users-table>
+</div>
